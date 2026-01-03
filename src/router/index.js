@@ -24,11 +24,6 @@ const router = createRouter({
       name: '/download',
       component: () => import('../views/downloadView.vue')
     },
-    {
-      path: '/personal-website',
-      name: '/personal-website',
-      component: () => import('../views/Projects/personal-website.vue')
-    },
   ]
 })
 

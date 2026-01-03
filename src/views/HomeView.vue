@@ -12,7 +12,7 @@
   <div class="home-container">
     <div class="info-card">
         <div class="card-header">
-            <el-avatar :size="80" src="src/assets/image/hoshino.jpg" />
+            <el-avatar :size="80" src="https://raw.githubusercontent.com/noob-xiaoyu/Noob_Xiaoyu-Web/refs/heads/main/src/assets/image/hoshino.jpg" />
             <div class="user-info">
                 <h2>Noob_Xiaoyu</h2>
                 <p>喵喵喵~</p>

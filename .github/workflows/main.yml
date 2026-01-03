@@ -12,7 +12,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # 或你的项目所需版本
+          node-version: '22' # 或你的项目所需版本
       - name: Install dependencies
         run: npm install
       - name: Build

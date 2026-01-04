@@ -6,9 +6,10 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 import './assets/main.css'
+// eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === 'development') {
   window.__VUE_DEVTOOLS_CONFIG__ = {
-    showWidget: false
+    showWidget: false,
   }
 }
 const app = createApp(App)

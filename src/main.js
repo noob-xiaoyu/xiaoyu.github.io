@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'development') {
   window.__VUE_DEVTOOLS_CONFIG__ = {
     showWidget: false,
   }
+  // Vue.config.devtools = false
 }
 const app = createApp(App)
 app.use(router)

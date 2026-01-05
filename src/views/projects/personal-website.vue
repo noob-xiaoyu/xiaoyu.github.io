@@ -21,8 +21,8 @@
       <el-divider/>
       <p>这是一个完全响应式的个人主页和作品集网站。</p>
       <p>前端采用 Vue 3、Vite 和 Element Plus 构建，实现了动态视频背景、黑白主题切换、流畅的路由过渡动画等功能。所有项目数据都通过模块化的方式进行管理，易于扩展和维护。</p>
+      <el-divider/>
       <h3>技术栈</h3>
-
       <div class="tech-stack">
         <el-tag v-for="tech in techStack" :key="tech" size="large" style="margin: 4px">
           {{ tech }}

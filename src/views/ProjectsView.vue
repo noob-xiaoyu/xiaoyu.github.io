@@ -21,8 +21,7 @@ const projectList = ref([
     id: 'Imgui-menu',
     icon: 'https://raw.githubusercontent.com/noob-xiaoyu/Noob_Xiaoyu-Web/refs/heads/main/src/assets/image/icon/imgui.png',
     title: 'Imgui-menu',
-    shortDescription:
-      '这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
+    shortDescription:'这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
     to: 'projects/Imgui-menu',
   },
   {
@@ -31,9 +30,6 @@ const projectList = ref([
     title: 'launcher for napcat&yunzai',
     shortDescription: '这是一个在 Windows 电脑上，让你能一键启动和运行 QQ 机器人的“傻瓜式”工具。',
     techStack: ['C++'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/windows-launcher-napcat-yunzai',
-    },
     to: 'projects/launcher',
   },
   {
@@ -42,13 +38,7 @@ const projectList = ref([
     title: 'yt-dlp-gui',
     shortDescription:
       '一个为 yt-dlp 开发的图形用户界面 (GUI) 工具，让不熟悉命令行的用户也能轻松使用其强大的视频下载功能。',
-    longDescription:
-      '什么是 yt-dlp？ yt-dlp 是一个非常强大的开源命令行程序，用于从 YouTube 和数百个其他网站下载视频和音频。 它是已停止维护的著名工具 youtube-dl 的一个活跃分支 (fork)，拥有更多功能和更及时的更新。 缺点：对于普通用户来说，纯粹的命令行操作（需要输入各种指令和参数）门槛较高，使用起来很不方便。 yt-dlp-gui 的作用和优势 这个项目就是为了解决 yt-dlp 的使用门槛问题而生的。它提供了以下关键功能： 1.图形化操作界面：用户不再需要记忆和输入复杂的命令，只需在软件窗口里粘贴视频网址、点击按钮，就可以完成下载。 2.简化的下载选项：它将 yt-dlp 的核心功能以简单明了的方式呈现出来，例如： 选择格式与清晰度：可以直接在界面上选择是下载视频还是仅提取 MP3 音频，并选择不同的视频质量。 设置下载目录：可以方便地通过图形界面选择文件保存的位置。 批量下载：支持一次性下载播放列表中的多个视频。 3.高级功能集成：除了基础下载，它也支持一些 yt-dlp 的高级特性，例如： Cookie 支持：可以导入浏览器的 Cookie 文件，用来下载需要登录才能观看的视频（如会员内容）。 字幕下载：能够方便地在下载视频的同时嵌入字幕。 解锁高画质格式：通过特定技术（EJS）支持下载 YouTube 上的 4K、AV1、VP9 等高画质或特殊编码的视频格式。 4.跨平台：这类 GUI 工具通常被设计成可以在 Windows、macOS 和 Linux 等多个操作系统上运行。 总结来说，noob-xiaoyu/yt-dlp-gui 是一个“中间人”或“翻译器”，它将用户在图形界面上的简单点击操作，“翻译”成 yt-dlp 能听懂的命令行指令，并在后台执行下载任务。它极大地降低了视频下载的门槛，让更多人能享受到 yt-dlp 的强大功能。',
-    images: [],
-    techStack: ['C#'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/yt-dlp-gui',
-    },
+    to: 'projects/yt-dlp-gui',
   },
   {
     id: 'SteamAccountManager',
@@ -97,18 +87,9 @@ const projectList = ref([
   //   icon: '',
   //   title: '',
   //   shortDescription: '',
-  //   longDescription: '',
-  //   images: [],
-  //   techStack: [''],
-  //   links: {
-  //     github: ''
-  //   }
+  //   to: '',
   // },
 ])
-// 3. 点击卡片时触发的函数
-function showProjectDetails(project) {
-  selectedProject.value = project // 记录被点击的项目
-}
 </script>
 
 <template>

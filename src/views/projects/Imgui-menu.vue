@@ -19,6 +19,7 @@
           <el-button class="action-btn" :icon="backIcon" size="large">返回</el-button>
         </router-link>
       </div>
+
       <el-divider/>
 
       <div>
@@ -34,11 +35,16 @@
             </li>
           </ul>
         </ul>
+        <el-divider/>
         <h2>核心功能一览</h2>
         <ul>
           <li><strong>1. 一键显示/隐藏</strong>
-            默认情况下，按下键盘上的 `Insert` 键，就可以打开或关闭这个菜单。
-            这个快捷键也可以在设置里更换成你喜欢的任何按键。
+            <p>
+              默认情况下，按下键盘上的 `Insert` 键，就可以打开或关闭这个菜单。
+            </p>
+            <p>
+              这个快捷键也可以在设置里更换成你喜欢的任何按键。
+            </p>
           </li>
           <li><strong>2. 丰富的视觉效果</strong>
             <ul>
@@ -103,6 +109,7 @@
             </ul>
           </li>
         </ul>
+        <el-divider/>
         <h2>如何使用这个菜单？</h2>
         <ul>
           <li><strong>1. 启动:</strong>
@@ -136,11 +143,13 @@
             </ul>
           </li>
         </ul>
+        <el-divider/>
         <p>总而言之，这不仅仅是一个简单的设置窗口，更是一个集美观、实用和高度个性化于一体的强大UI框架，为你提供了流畅、现代的交互体验。</p>
-        <h2>两个</h2>
-        <ul>字没用</ul>
+        <el-divider/>
+        <h2>两个字</h2>
+        <p>没用</p>
       </div>
-
+      <el-divider/>
       <h3>技术栈</h3>
       <div class="tech-stack">
         <el-tag v-for="tech in techStack" :key="tech" size="large" style="margin: 4px">

@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: '/projects/ImGui-menu',
       name: '/ImGui-menu',
-      component: () => import('../views/projects/ImGui-menu.vue')
+      component: () => import('../views/projects/Imgui-menu.vue')
     },
     {
       path: '/projects/launcher',

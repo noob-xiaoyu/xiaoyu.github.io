@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: '/projects/ImGui-menu',
       name: '/ImGui-menu',
-      component: () => import('../views/projects/ImGui-menu.vue')
+      component: () => import('../views/projects/Imgui-menu.vue')
     },
     {
       path: '/projects/launcher',
@@ -44,6 +44,16 @@ const router = createRouter({
       path: '/projects/yt-dlp-gui',
       name: '/yt-dlp-gui',
       component: () => import('../views/projects/yt-dlp-gui.vue')
+    },
+    {
+      path: '/projects/SteamAccountManager',
+      name: '/SteamAccountManager',
+      component: () => import('../views/projects/SteamAccountManager.vue')
+    },
+    {
+      path: '/projects/Projection_file_classification',
+      name: '/Projection_file_classification',
+      component: () => import('../views/projects/Projection_file_classification.vue')
     },
   ]
 })

@@ -48,11 +48,7 @@ const projectList = ref([
       '一款方便用户在多个 Steam 账号之间进行“一键切换”的效率工具，免去手动输入账号密码的烦恼。',
     longDescription:
       '这是什么？ SteamAccountManager (SAM) 是一款方便用户在多个 Steam 账号之间快速切换的工具。 核心痛点 对于拥有多个 Steam 账号（例如，大号、小号、不同区域的账号）的玩家来说，每次切换账号都需要： 退出当前登录的账号。 重新输入另一个账号的用户名和密码。 可能还需要进行手机令牌验证。 这个过程非常繁琐和耗时。 SAM 如何解决？ 这款工具通过记住您的账号信息，实现了“一键切换”的功能。 账号管理： 你可以将所有 Steam 账号添加到管理器中。 快速登录： 只需在列表中选择你想登录的账号，然后点击一个按钮，工具就会自动为你完成退出和登录的全部流程，无需手动输入密码和令牌。 总结来说，这是一个极大地简化了 Steam 多账号切换流程的效率工具，为需要频繁换号的玩家节省了大量时间和精力。',
-    images: [],
-    techStack: ['C#'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/SteamAccountManager',
-    },
+    to: 'projects/SteamAccountManager',
   },
   {
     id: 'Minecraft 投影文件分类',
@@ -67,6 +63,7 @@ const projectList = ref([
     links: {
       github: 'https://github.com/noob-xiaoyu/Minecraft-Projection-file-Classification',
     },
+    to: 'projects/Projection_file_classification',
   },
   {
     id: 'ImageBinaryConverter',

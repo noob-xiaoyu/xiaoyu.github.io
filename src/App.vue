@@ -8,7 +8,7 @@ import { useTheme } from '@/composables/useTheme.js';   // 2. 导入 useTheme
 const videoUrl = ref('');
 const setRandomVideo = () => {
   const videoIndex = Math.floor(Math.random() * 11) + 1;
-  videoUrl.value = new URL(`./assets/video/a${videoIndex}.mp4`, import.meta.url).href;
+  videoUrl.value = new URL(`./assets/video/a${videoIndex}.webm`, import.meta.url).href;
 };
 onMounted(() => {
   setRandomVideo();
@@ -32,7 +32,7 @@ watch(theme, (newTheme, oldTheme) => {
   <div class="video-background">
     <video :src="videoUrl" autoplay muted loop playsinline></video>
   </div>
-  
+
   <!-- 内容覆盖层 -->
   <div class="content-overlay">
     <RouterView v-slot="{ Component }">
@@ -43,12 +43,12 @@ watch(theme, (newTheme, oldTheme) => {
   </div>
 
   <!-- 4. 将主题切换按钮添加到这里 -->
-  <el-button 
-    class="theme-toggle" 
-    :icon="theme === 'light' ? Moon : Sunny" 
-    @click="toggleTheme" 
-    circle 
-    size="large" 
+  <el-button
+    class="theme-toggle"
+    :icon="theme === 'light' ? Moon : Sunny"
+    @click="toggleTheme"
+    circle
+    size="large"
   />
 
   <div class="global-footer">

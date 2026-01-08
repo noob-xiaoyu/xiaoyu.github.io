@@ -2,6 +2,7 @@
 import DownloadCard from '@/components/DownloadCard.vue';
 import backIcon from '@/components/icons/back.vue';
 import launcherIcon from '@/components/icons/launcher.vue';
+import SteamAccountManager_Icon from '@/components/icons/SteamAccountManager.vue'
 import { ref } from 'vue';
 
 import vsIcon from '@/components/icons/Visual_Studio_2022.vue';
@@ -11,13 +12,19 @@ const downloadList = ref([
     iconComponent: vsIcon,
     title: 'Visual Studio 2022',
     description: 'Visual Studio 2022 Community',
-    to: 'https://aka.ms/vs/17/release/vs_community.exe', 
+    to: 'https://aka.ms/vs/17/release/vs_community.exe',
   },
   {
     iconComponent: launcherIcon,
     title: 'launcher for napcat&yunzai',
     description: '这是一个在 Windows 电脑上，让你能一键启动和运行 QQ 机器人的“傻瓜式”工具',
-    to: '../assets/exe/launcher.exe', 
+    to: '../assets/exe/launcher.exe',
+  },
+  {
+    iconComponent: SteamAccountManager_Icon,
+    title: 'SteamAccountManager',
+    description: '一个用于集中管理 Steam 账号的工具',
+    to: 'src/assets/exe/SteamAccountManager.exe',
   },
 ]);
 </script>
@@ -40,6 +47,7 @@ const downloadList = ref([
           :title="item.title"
           :description="item.description"
           :to="item.to">
+
           <template v-if="item.iconComponent" #icon>
             <component :is="item.iconComponent" class="custom-svg-icon" />
           </template>

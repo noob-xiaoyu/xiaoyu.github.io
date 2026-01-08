@@ -61,7 +61,7 @@
               </ul>
 
           </li>
-          <li><strong>3.高级功能集成：</strong>
+          <!-- <li><strong>3.高级功能集成：</strong>
             <ul>
               <p>除了基础下载，它也支持一些 yt-dlp 的高级特性，例如：</p>
               <ul>
@@ -79,9 +79,9 @@
                 </li>
               </ul>
             </ul>
-          </li>
+          </li> -->
           <li>
-            <strong>4.跨平台：</strong>
+            <strong>3.跨平台：</strong>
             <ul><p>yt-dlp-gui 基于 .NET MAUI 开发，可以在 Windows、macOS 和 Linux 上运行，满足不同用户的需求。</p></ul>
           </li>
       </ul>

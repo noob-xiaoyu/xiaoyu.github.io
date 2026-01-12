@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  import backIcon from '@/components/icons/back.vue'
+  import backIcon from '@/components/icons/back-icon.vue'
   import GithubIcon from '@/components/icons/GithubIcon.vue';
   const techStack = ref(['Vue 3', 'Vite', 'Element Plus', 'Vue Router'])
   const links = ref({

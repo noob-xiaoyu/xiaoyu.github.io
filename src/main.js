@@ -6,7 +6,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 import './assets/main.css'
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.MODE === 'development') {
   window.__VUE_DEVTOOLS_CONFIG__ = {
     showWidget: false,
   }

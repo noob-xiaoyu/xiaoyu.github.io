@@ -1,12 +1,9 @@
 <!-- HomeView.vue -->
 <script setup>
-    import { Sunny, Moon } from '@element-plus/icons-vue'
     import GithubIcon from '@/components/icons/GithubIcon.vue';
-    import downloadIcon from '@/components/icons/download.vue';
-    import aboutIcon from '@/components/icons/about.vue';
-    import projectIcon from '@/components/icons/project.vue';
-    import { useTheme } from '@/composables/useTheme.js';
-    const { theme, toggleTheme } = useTheme();
+    import downloadIcon from '@/components/icons/download-icon.vue';
+    import aboutIcon from '@/components/icons/about-icon.vue';
+    import projectIcon from '@/components/icons/project-icon.vue';
 </script>
 <template>
   <div class="home-container">

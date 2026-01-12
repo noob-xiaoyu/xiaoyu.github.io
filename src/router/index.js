@@ -38,7 +38,7 @@ const router = createRouter({
     {
       path: '/projects/launcher',
       name: '/launcher',
-      component: () => import('../views/projects/launcher.vue')
+      component: () => import('../views/projects/launcher-app.vue')
     },
     {
       path: '/projects/yt-dlp-gui',

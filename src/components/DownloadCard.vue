@@ -32,7 +32,7 @@ defineProps({
           <slot name="icon">
             <!-- 自动检测模式 -->
             <template v-if="iconType === 'auto'">
-              <component v-if="typeof icon === 'object'" :is="icon" class="custom-svg-icon" />
+              <component v-if="icon && typeof icon !== 'string'" :is="icon" class="custom-svg-icon" />
               <el-avatar v-else-if="icon" :size="52" :src="icon" shape="square" />
             </template>
 

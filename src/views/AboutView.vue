@@ -1,12 +1,10 @@
 <!-- AboutView.vue -->
 <script setup>
-    import { useTheme } from '@/composables/useTheme.js';
-    import backIcon from '@/components/icons/back.vue';
-    import qqIcon from '@/components/icons/qq.vue';
+    import backIcon from '@/components/icons/back-icon.vue';
+    import qqIcon from '@/components/icons/qq-icon.vue';
     import GithubIcon from '@/components/icons/GithubIcon.vue';
-    import qqmailIcon from '@/components/icons/qqmail.vue';
-    import gmailIcon from '@/components/icons/gmail.vue';
-    const { theme, toggleTheme } = useTheme();
+    import qqmailIcon from '@/components/icons/qqmail-icon.vue';
+    import gmailIcon from '@/components/icons/gmail-icon.vue';
 </script>
 <template>
   <div class="home-container">

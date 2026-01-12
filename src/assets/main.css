@@ -74,6 +74,66 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 .video-background video {
   width: 100%; height: 100%;
   object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* 视频加载状态 */
+.video-loading {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  backdrop-filter: blur(5px);
+}
+
+.video-loading .el-icon {
+  font-size: 32px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 视频加载错误 */
+.video-error {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  max-width: 300px;
+}
+
+.video-error .el-icon {
+  font-size: 48px;
+  color: #f56c6c;
+}
+
+.video-error span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.video-error .el-button {
+  margin-top: 10px;
 }
 
 .content-overlay {
@@ -373,4 +433,105 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   }
   html::-webkit-scrollbar { display: none; }
   html { scrollbar-width: none; -ms-overflow-style: none; }
+}
+
+/* 手机宽度优化 */
+@media (max-width: 767px) {
+  /* 视频背景优化 */
+  .video-background video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* 卡片优化 */
+  .info-card {
+    width: 95%;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+
+  /* 首页优化 */
+  .home-container .info-card {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .home-container .user-info h2 {
+    font-size: 1.8em;
+  }
+
+  .home-container .user-info p {
+    font-size: 1em;
+  }
+
+  /* 项目/下载页优化 */
+  .projects-container, .Download-container {
+    padding: 20px 10px;
+  }
+
+  .projects-card, .Download-card {
+    max-width: 100%;
+  }
+
+  /* 卡片内容优化 */
+  .project-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .project-details {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .project-details h3 {
+    font-size: 1em;
+  }
+
+  .project-details p {
+    font-size: 0.8em;
+  }
+
+  /* 图标容器优化 */
+  .icon-container {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* 按钮优化 */
+  .action-btn {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  .action-btn .el-icon {
+    font-size: 1em;
+  }
+
+  /* 主题切换按钮优化 */
+  .theme-toggle {
+    bottom: 20px;
+    right: 20px;
+    size: medium;
+  }
+
+  /* 全局页脚优化 */
+  .global-footer {
+    font-size: 10px;
+    bottom: 15px;
+  }
+
+  /* 详情弹窗优化 */
+  .project-detail-dialog.el-dialog {
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+
+  .project-detail-dialog .project-links .action-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

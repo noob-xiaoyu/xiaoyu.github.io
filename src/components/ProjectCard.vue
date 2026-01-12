@@ -1,7 +1,4 @@
 <script setup>
-// 1. 声明本组件会发出一个名为 'viewDetails' 的事件
-const emit = defineEmits(['viewDetails'])
-
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
   icon: String,
@@ -14,7 +11,7 @@ const props = defineProps({
 
 <template>
   <router-link :to="to" style="display: block; text-decoration: none">
-    <div class="project-card-link" @click="handleClick">
+    <div class="project-card-link">
       <el-card class="project-card" shadow="hover">
         <div class="project-card-content">
           <div class="icon-container">

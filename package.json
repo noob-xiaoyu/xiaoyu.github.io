@@ -16,7 +16,6 @@
   "dependencies": {
     "element-plus": "^2.13.0",
     "github-markdown-css": "^5.8.1",
-    "live2d-widget": "^3.1.4",
     "marked": "^17.0.1",
     "remark": "^15.0.1",
     "remark-math": "^6.0.0",

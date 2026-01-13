@@ -106,34 +106,47 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 /* 视频加载错误 */
 .video-error {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
   color: var(--main-text-color);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
+  background: var(--dialog-bg-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--dialog-border-color);
   backdrop-filter: blur(5px);
   text-align: center;
   max-width: 300px;
+  box-shadow: var(--dialog-box-shadow);
+  pointer-events: auto;
 }
 
 .video-error .el-icon {
-  font-size: 48px;
-  color: #f56c6c;
+  font-size: 24px;
+  color: var(--error-color, #f56c6c);
 }
 
 .video-error span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .video-error .el-button {
-  margin-top: 10px;
+  margin-top: 0;
+  font-size: 12px;
+  padding: 4px 12px;
+  background-color: var(--toggle-bg-color);
+  color: var(--toggle-icon-color);
+  border-color: var(--toggle-border-color);
+}
+
+.video-error .el-button:hover {
+  background-color: var(--toggle-hover-bg-color);
+  border-color: var(--toggle-hover-border-color);
 }
 
 .content-overlay {

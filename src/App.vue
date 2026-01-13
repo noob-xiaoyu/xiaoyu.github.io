@@ -9,6 +9,7 @@ import Waifu from '@/components/Waifu.vue' // 导入看板娘组件
 const videoUrl = ref('');
 const videoLoading = ref(true);
 const videoError = ref(false);
+const videoRef = ref(null);
 const cachedVideos = ref(new Set()); // 缓存已加载的视频
 
 // 预加载视频
@@ -38,6 +39,26 @@ const preloadVideo = (url) => {
   });
 };
 
+// 处理视频加载成功
+const handleVideoLoaded = () => {
+  console.log('视频加载成功');
+  videoLoading.value = false;
+  videoError.value = false;
+};
+
+// 处理视频加载失败
+const handleVideoError = (event) => {
+  console.error('视频加载失败:', event.target.error);
+  videoLoading.value = false;
+  videoError.value = true;
+};
+
+// 处理重试按钮点击
+const handleRetry = () => {
+  console.log('点击重试按钮');
+  setRandomVideo();
+};
+
 // 设置随机视频
 const setRandomVideo = async () => {
   videoLoading.value = true;
@@ -47,21 +68,33 @@ const setRandomVideo = async () => {
     // 生成随机视频索引
     const videoIndex = Math.floor(Math.random() * 11) + 1;
     // 使用 public/video/ 目录中的视频文件
-    const videoPath = `/Noob_Xiaoyu-Web/video/a${videoIndex}.webm`;
+    const videoPath = `/video/a${videoIndex}.webm`;
 
     console.log('尝试加载视频:', videoPath);
 
-    // 直接设置视频URL
-    videoUrl.value = videoPath;
-    console.log('视频URL设置成功:', videoPath);
+    // 直接设置视频URL，添加时间戳避免缓存
+    videoUrl.value = `${videoPath}?t=${Date.now()}`;
+    console.log('视频URL设置成功:', videoUrl.value);
+
+    // 强制视频元素重新加载
+    if (videoRef.value) {
+      console.log('强制视频元素重新加载');
+      videoRef.value.load();
+    }
   } catch (error) {
     console.error('视频加载失败:', error);
     // 加载失败时尝试其他视频
     try {
       const fallbackIndex = Math.floor(Math.random() * 11) + 1;
-      const fallbackPath = `/Noob_Xiaoyu-Web/video/a${fallbackIndex}.webm`;
+      const fallbackPath = `/video/a${fallbackIndex}.webm`;
       console.log('尝试加载备用视频:', fallbackPath);
-      videoUrl.value = fallbackPath;
+      videoUrl.value = `${fallbackPath}?t=${Date.now()}`;
+
+      // 强制视频元素重新加载
+      if (videoRef.value) {
+        console.log('强制视频元素重新加载');
+        videoRef.value.load();
+      }
     } catch (fallbackError) {
       console.error('备用视频加载也失败:', fallbackError);
       videoError.value = true;
@@ -93,13 +126,14 @@ watch(theme, (newTheme, oldTheme) => {
   <!-- 视频背景层 -->
   <div class="video-background">
     <video
+      ref="videoRef"
       :src="videoUrl"
       autoplay
       muted
       loop
       playsinline
-      @loadeddata="videoLoading = false"
-      @error="videoError = true"
+      @loadeddata="handleVideoLoaded"
+      @error="handleVideoError"
     ></video>
     <!-- 视频加载状态 -->
     <div v-if="videoLoading" class="video-loading">
@@ -109,7 +143,7 @@ watch(theme, (newTheme, oldTheme) => {
     <div v-if="videoError" class="video-error">
       <el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0zm0 960a448 448 0 1 1 448-448 448 448 0 0 1-448 448zm-45.2-512 192-192a32 32 0 1 1 45.2 45.2L565.2 512l159.9 174.7a32 32 0 0 1-45.2 45.2l-192-192a32 32 0 0 1 0-45.2z"></path></svg></el-icon>
       <span>视频加载失败</span>
-      <el-button size="small" @click="setRandomVideo">重试</el-button>
+      <el-button size="small" @click="handleRetry">重试</el-button>
     </div>
   </div>
 

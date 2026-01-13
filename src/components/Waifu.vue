@@ -43,7 +43,7 @@ function initWaifu() {
     console.log('日期信息:', { month, day, isOddDay, modelId });
 
     // 构建模型路径的基础URL
-    const baseUrl = 'https://raw.githubusercontent.com/imuncle/live2d/master/model'
+    const baseUrl = 'https://raw.githubusercontent.com/noob-xiaoyu/live2d/master/model'
     let modelPath = ''
 
     // 检查是否为节假日

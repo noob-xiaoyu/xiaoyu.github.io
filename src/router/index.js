@@ -55,6 +55,11 @@ const router = createRouter({
       name: '/Projection_file_classification',
       component: () => import('../views/projects/Projection_file_classification.vue')
     },
+    {
+      path: '/projects/ImageBinaryConverter',
+      name: '/ImageBinaryConverter',
+      component: () => import('../views/projects/ImageBinaryConverter.vue')
+    },
   ]
 })
 

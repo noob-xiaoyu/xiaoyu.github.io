@@ -6,6 +6,8 @@ import bIcon from '@/assets/image/icon/svg/b.svg'
 import launcherIcon from '@/assets/image/icon/svg/launcher.svg'
 import yt_dlp_gui_Icon from '@/assets/image/icon/dlp.ico'
 import SteamAccountManager_Icon from '@/assets/image/icon/SteamAccountManager.ico'
+import imguiIcon from '@/assets/image/icon/imgui.png'
+import vsIcon from '@/assets/image/icon/Visual Studio 2022.png'
 
 // 1. 完整项目数据
 const projectList = ref([
@@ -18,7 +20,7 @@ const projectList = ref([
   },
   {
     id: 'Imgui-menu',
-    icon: 'https://raw.githubusercontent.com/noob-xiaoyu/Noob_Xiaoyu-Web/refs/heads/main/src/assets/image/icon/imgui.png',
+    icon: imguiIcon,
     title: 'Imgui-menu',
     shortDescription:'这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
     to: 'projects/Imgui-menu',
@@ -53,28 +55,18 @@ const projectList = ref([
     title: 'Minecraft 投影文件分类',
     shortDescription:
       '一个用于将 Minecraft Litematica 模组的投影文件按文件夹进行自动化分类整理的小工具。',
-    longDescription:
-      '这是什么？ 这是一个为《我的世界》(Minecraft) 玩家设计的高效整理工具，专门用于管理 Litematica 模组的投影文件（.litematic）。 如果你是一位建筑玩家，使用 Litematica 模组来保存和加载建筑投影，那么你的 `schematics` 文件夹里很可能堆满了各种文件，难以查找和管理。这个工具就是为了解决这个问题而生。 核心功能 自动化分类： 无需手动操作，程序会自动扫描指定文件夹内的所有 .litematic 文件。 创建同名文件夹： 对于每一个投影文件，程序会自动创建一个与该文件同名的文件夹（不包含扩展名）。 文件归档： 程序会将原始的投影文件移动到新创建的对应文件夹中，实现整洁的“一文件一夹”式管理。 简单易用： 只需运行程序，即可完成所有整理工作，大大节省了手动整理的时间。 解决了什么痛点？ 告别混乱： 将几十上百个散乱的投影文件变得井井有条，每个建筑项目都有自己独立的文件夹。 快速定位： 当你需要查找某个特定的建筑投影时，可以直接通过文件夹名称快速找到，而不是在海量文件中费力寻找。 总结来说，这是一款能极大提升 Minecraft 建筑玩家生活质量的“懒人”工具，让你可以更专注于创造，而不是浪费时间在文件管理上。',
-    images: [],
-    techStack: ['C++', 'ImGui'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/Minecraft-Projection-file-Classification',
-    },
     to: 'projects/Projection_file_classification',
   },
   {
     id: 'ImageBinaryConverter',
-    icon: bIcon,
+    icon: vsIcon,
     title: 'ImageBinaryConverter',
     shortDescription:
       '一个可以在图片和二进制文件之间进行双向转换的工具，用于文件伪装、隐藏和绕过传输限制。',
-    longDescription:
-      'ImageBinaryConverter 是一个实用的小工具，它的核心功能是在“图片”和“二进制文件”之间进行双向转换。 核心功能:二进制转图片： 将任意文件（如 .exe, .dll, .zip）转换成一张图片。这张图片看起来像是随机的彩色噪点，但它内部包含了原始文件的完整数据。 图片转二进制： 将通过本工具生成的特殊图片还原成原始的二进制文件，数据完全无损。 有什么用？ 这个工具主要用于一些特殊的场景，例如： 文件伪装与隐藏： 你可以将一个私密文件转换成一张普通的图片，不容易引起注意。 绕过传输限制： 某些平台可能只允许上传图片文件。通过这个工具，你可以将其他类型的文件伪装成图片进行上传，之后再下载下来进行还原。总结来说，这是一个巧妙的文件隐藏和传输工具，通过将文件数据编码到图片的像素中，实现了文件类型的伪装。',
-    images: [],
-    techStack: ['C#'],
     links: {
       github: 'https://github.com/noob-xiaoyu/Imgui-menu',
     },
+    to: 'projects/ImageBinaryConverter',
   },
   // {
   //   id: '',

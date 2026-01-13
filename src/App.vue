@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router'
 import { ref, onMounted, watch } from 'vue'
 import { Sunny, Moon } from '@element-plus/icons-vue' // 1. 导入图标
 import { useTheme } from '@/composables/useTheme.js';   // 2. 导入 useTheme
+import Waifu from '@/components/Waifu.vue' // 导入看板娘组件
 
 // --- 视频背景逻辑 (优化) ---
 const videoUrl = ref('');
@@ -133,4 +134,7 @@ watch(theme, (newTheme, oldTheme) => {
   <div class="global-footer">
     © 2025 Noob_Xiaoyu. All Rights Reserved.
   </div>
+
+  <!-- 看板娘组件 -->
+  <Waifu />
 </template>

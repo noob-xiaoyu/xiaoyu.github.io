@@ -132,12 +132,12 @@ onUnmounted(() => {
   bottom: 0;
   left: 0;
   z-index: 9999;
-  pointer-events: none; /* 容器本身不捕获点击事件 */
+  pointer-events: none;
 }
 
 .live2d {
   z-index: 9999;
-  pointer-events: auto; /* 模型本身可以捕获点击事件 */
+  pointer-events: none;
   display: block;
   width: 300px;
   height: 800px;

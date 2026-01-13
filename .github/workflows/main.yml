@@ -1,49 +1,44 @@
-# Workflow 名称
 name: Deploy Vue to GitHub Pages
 
-# 触发条件：当代码推送到 main 分支时触发
 on:
   push:
     branches: ["main"]
 
-# 权限设置：允许 GITHUB_TOKEN 进行部署
+# 权限设置
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 并发控制：如果还没部署完又有新提交，取消旧的任务（解决你之前遇到的 queued 问题）
+# 并发控制：新提交自动取消旧任务
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # 构建任务
+  # 构建任务（只跑一次）
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (检出代码)
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node (安装 Node.js)
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22" # 建议使用 LTS 版本
-          cache: 'npm'       # 自动缓存依赖，加快构建速度
+          node-version: "22" # 指定 Node 22
+          cache: 'npm'
 
-      - name: Install Dependencies (安装依赖)
+      - name: Install Dependencies
         run: npm ci
-        # 如果你用 yarn，改为: yarn install --frozen-lockfile
-        # 如果你用 pnpm，需要额外加上 pnpm 的 setup action
 
-      - name: Build (打包构建)
+      - name: Build
         run: npm run build
-        # 这一步会生成 dist 目录
 
-      - name: Upload artifact (上传构建产物)
+      # 这一步只应该出现一次
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 指定 Vue 构建输出的目录，Vite 默认为 dist
           path: ./dist
 
   # 部署任务
@@ -51,9 +46,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build # 必须等 build 任务成功后才执行
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages (部署)
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

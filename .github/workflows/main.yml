@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node (安装 Node.js)
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # 建议使用 LTS 版本
+          node-version: "22" # 建议使用 LTS 版本
           cache: 'npm'       # 自动缓存依赖，加快构建速度
 
       - name: Install Dependencies (安装依赖)

@@ -9,7 +9,7 @@ import msysIcon from '@/components/icons/msys.vue';
 import SteamAccountManagerIcon from '@/assets/image/icon/svg/SteamAccountManager.svg';
 import NeatDMIcon from '@/assets/image/icon/NeatDM.png';
 import ThoriumWinIcon from '@/assets/image/icon/Thorium.png';
-import ClashPartyIcon from '@/assets/image/icon/Clash.png';
+import ClashPartyIcon from '@/assets/image/icon/clash.png';
 import ClashDevIcon from '@/assets/image/icon/clash-dev.png';
 import javaIcon from '@/assets/image/icon/java.webp';
 </script>

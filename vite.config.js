@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Noob_Xiaoyu-Web/', // GitHub Pages子路径
+  base: './', // 使用相对路径，确保在任何环境下都能正确加载
   publicDir: 'public', // 明确指定public目录
   server: {
     host: '0.0.0.0', // 监听所有地址，包括公网

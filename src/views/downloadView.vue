@@ -1,24 +1,22 @@
 <script setup>
-import backIcon from '@/components/icons/back-icon.vue';
-import launcherIcon from '@/components/icons/launcher-icon.vue';
-import vsIcon from '@/components/icons/Visual_Studio_2022.vue';
-import EverythingIcon from '@/components/icons/EverythingIcon.vue';
-import nullIcon from '@/components/icons/null.vue';
-import IDEAIcon from '@/components/icons/IDEA.vue';
-import msysIcon from '@/components/icons/msys.vue';
-import SteamAccountManagerIcon from '@/assets/image/icon/svg/SteamAccountManager.svg';
-import NeatDMIcon from '@/assets/image/icon/NeatDM.png';
-import ThoriumWinIcon from '@/assets/image/icon/Thorium.png';
-import ClashPartyIcon from '@/assets/image/icon/clash.png';
-import ClashDevIcon from '@/assets/image/icon/clash-dev.png';
-import javaIcon from '@/assets/image/icon/java.webp';
-import PowerToysIcon from '@/components/icons/PowerToys.vue';
+import backIcon from '@/components/icons/back-icon.vue'
+import launcherIcon from '@/components/icons/launcher-icon.vue'
+import vsIcon from '@/components/icons/Visual_Studio_2022.vue'
+import EverythingIcon from '@/components/icons/EverythingIcon.vue'
+import nullIcon from '@/components/icons/null.vue'
+import IDEAIcon from '@/components/icons/IDEA.vue'
+import msysIcon from '@/components/icons/msys.vue'
+import NeatDMIcon from '@/assets/image/icon/NeatDM.png'
+import ThoriumWinIcon from '@/assets/image/icon/Thorium.png'
+import ClashPartyIcon from '@/assets/image/icon/clash.png'
+import ClashDevIcon from '@/assets/image/icon/clash-dev.png'
+import javaIcon from '@/assets/image/icon/java.webp'
+import PowerToysIcon from '@/components/icons/PowerToys.vue'
 </script>
 
 <template>
   <div class="Download-container">
     <div class="info-card Download-card">
-
       <div class="project-card-header">
         <h1>下载</h1>
         <router-link to="/">
@@ -29,7 +27,12 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
 
       <div class="project-list-container">
         <!-- Visual Studio 2022 -->
-        <a href="https://aka.ms/vs/17/release/vs_community.exe" target="_blank" class="download-card-link" download>
+        <a
+          href="https://aka.ms/vs/17/release/vs_community.exe"
+          target="_blank"
+          class="download-card-link"
+          download
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -44,7 +47,7 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- launcher for napcat&yunzai -->
-        <a href="../assets/exe/launcher.exe" target="_blank" class="download-card-link" download>
+        <!-- <a href="../assets/exe/launcher.exe" target="_blank" class="download-card-link" download>
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -56,14 +59,23 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
               </div>
             </div>
           </el-card>
-        </a>
+        </a> -->
 
         <!-- SteamAccountManager -->
-        <a href="src/assets/exe/SteamAccountManager.exe" target="_blank" class="download-card-link" download>
+        <!-- <a
+          href="src/assets/exe/SteamAccountManager.exe"
+          target="_blank"
+          class="download-card-link"
+          download
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
-                <img :src="SteamAccountManagerIcon" alt="SteamAccountManager" class="custom-svg-icon" />
+                <img
+                  :src="SteamAccountManagerIcon"
+                  alt="SteamAccountManager"
+                  class="custom-svg-icon"
+                />
               </div>
               <div class="project-details">
                 <h3>SteamAccountManager</h3>
@@ -71,10 +83,14 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
               </div>
             </div>
           </el-card>
-        </a>
+        </a> -->
 
         <!-- Everything -->
-        <a href="https://www.voidtools.com/zh-cn/downloads/" target="_blank" class="download-card-link">
+        <a
+          href="https://www.voidtools.com/zh-cn/downloads/"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -89,7 +105,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- ExplorerBlurMica -->
-        <a href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest" target="_blank" class="download-card-link">
+        <a
+          href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -104,7 +124,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- JetBrains IDEA 其他版本 -->
-        <a href="https://www.jetbrains.com/zh-cn/idea/download/other.html" target="_blank" class="download-card-link">
+        <a
+          href="https://www.jetbrains.com/zh-cn/idea/download/other.html"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -134,7 +158,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- Microsoft 通用运行时库 -->
-        <a href="https://github.com/noob-xiaoyu/Download_site/raw/refs/heads/main/Microsoft%20common%20runtime%20libraries/Microsoft%20common%20runtime%20libraries25-12-3.exe" target="_blank" class="download-card-link">
+        <a
+          href="https://github.com/noob-xiaoyu/Download_site/raw/refs/heads/main/Microsoft%20common%20runtime%20libraries/Microsoft%20common%20runtime%20libraries25-12-3.exe"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -149,7 +177,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- NeatDM 多线程下载器 -->
-        <a href="https://github.com/noob-xiaoyu/Download_site/blob/main/Multi-threaded%20downloader/NeatDM_v1.3_Chs.exe" target="_blank" class="download-card-link">
+        <a
+          href="https://github.com/noob-xiaoyu/Download_site/blob/main/Multi-threaded%20downloader/NeatDM_v1.3_Chs.exe"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -164,7 +196,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- Thorium-Win 浏览器 -->
-        <a href="https://github.com/Alex313031/Thorium-Win/releases/latest" target="_blank" class="download-card-link">
+        <a
+          href="https://github.com/Alex313031/Thorium-Win/releases/latest"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -179,7 +215,11 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
         </a>
 
         <!-- PowerToys -->
-        <a href="https://github.com/microsoft/PowerToys/releases/latest" target="_blank" class="download-card-link">
+        <a
+          href="https://github.com/microsoft/PowerToys/releases/latest"
+          target="_blank"
+          class="download-card-link"
+        >
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -198,52 +238,70 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
           <div class="download-card-link">
             <div class="project-card-content">
               <!-- Clash Party -->
-              <a href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest" target="_blank" style="text-decoration: none">
-              <el-card class="project-card" shadow="hover">
-                <div class="project-card-content">
-                  <div class="icon-container">
-                    <img :src="ClashPartyIcon" alt="Clash Party" class="custom-svg-icon" />
+              <a
+                href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <el-card class="project-card" shadow="hover">
+                  <div class="project-card-content">
+                    <div class="icon-container">
+                      <img :src="ClashPartyIcon" alt="Clash Party" class="custom-svg-icon" />
+                    </div>
+                    <div class="project-details">
+                      <h3>Clash Party</h3>
+                      <p>基于 Mihomo 的跨平台代理客户端，支持多种代理协议和高级功能</p>
+                    </div>
                   </div>
-                  <div class="project-details">
-                    <h3>Clash Party</h3>
-                    <p>基于 Mihomo 的跨平台代理客户端，支持多种代理协议和高级功能</p>
-                  </div>
-                </div>
-              </el-card>
+                </el-card>
               </a>
               <!-- Clash 官网导航 -->
-              <a href="https://github.com/clashdownload/Clash" target="_blank" style="text-decoration: none">
-              <el-card class="project-card" shadow="hover">
-                <div class="project-card-content">
-                  <div class="icon-container">
-                    <img :src="ClashDevIcon" alt="Clash Dev" class="custom-svg-icon" />
+              <a
+                href="https://github.com/clashdownload/Clash"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <el-card class="project-card" shadow="hover">
+                  <div class="project-card-content">
+                    <div class="icon-container">
+                      <img :src="ClashDevIcon" alt="Clash Dev" class="custom-svg-icon" />
+                    </div>
+                    <div class="project-details">
+                      <h3>Clash 官网导航</h3>
+                      <p>Clash 官网各版本 Clash 下载地址及备份下载地址</p>
+                    </div>
                   </div>
-                  <div class="project-details">
-                    <h3>Clash 官网导航</h3>
-                    <p>Clash 官网各版本 Clash 下载地址及备份下载地址</p>
-                  </div>
-                </div>
-              </el-card>
+                </el-card>
               </a>
             </div>
           </div>
         </el-card>
 
-        <el-divider/>
+        <el-divider />
 
         <!-- Java -->
         <el-card class="project-card" shadow="hover">
-          <div style="color: var(--main-text-color); text-align: left;">
+          <div style="color: var(--main-text-color); text-align: left">
             <h1>Java 开发工具包</h1>
           </div>
 
           <div class="java-versions-container">
             <!-- JDK 25 -->
-            <a href="https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+            <a
+              href="https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe"
+              target="_blank"
+              class="download-card-link"
+              style="text-decoration: none"
+            >
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
-                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                    <img
+                      :src="javaIcon"
+                      alt="Java"
+                      class="custom-svg-icon"
+                      style="width: 80px; height: 80px"
+                    />
                   </div>
                   <div class="project-details">
                     <h3>Oracle JDK 25.0.2</h3>
@@ -253,11 +311,21 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
               </el-card>
             </a>
             <!-- JDK 22 -->
-            <a href="https://download.oracle.com/java/22/archive/jdk-22.0.2_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+            <a
+              href="https://download.oracle.com/java/22/archive/jdk-22.0.2_windows-x64_bin.exe"
+              target="_blank"
+              class="download-card-link"
+              style="text-decoration: none"
+            >
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
-                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                    <img
+                      :src="javaIcon"
+                      alt="Java"
+                      class="custom-svg-icon"
+                      style="width: 80px; height: 80px"
+                    />
                   </div>
                   <div class="project-details">
                     <h3>Oracle JDK 22.0.2</h3>
@@ -267,11 +335,21 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
               </el-card>
             </a>
             <!-- JDK 21 -->
-            <a href="https://download.oracle.com/java/21/archive/jdk-21.0.2_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+            <a
+              href="https://download.oracle.com/java/21/archive/jdk-21.0.2_windows-x64_bin.exe"
+              target="_blank"
+              class="download-card-link"
+              style="text-decoration: none"
+            >
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
-                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                    <img
+                      :src="javaIcon"
+                      alt="Java"
+                      class="custom-svg-icon"
+                      style="width: 80px; height: 80px"
+                    />
                   </div>
                   <div class="project-details">
                     <h3>Oracle JDK 21.0.2</h3>
@@ -281,11 +359,21 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
               </el-card>
             </a>
             <!-- JDK 17 -->
-            <a href="https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+            <a
+              href="https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe"
+              target="_blank"
+              class="download-card-link"
+              style="text-decoration: none"
+            >
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
-                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                    <img
+                      :src="javaIcon"
+                      alt="Java"
+                      class="custom-svg-icon"
+                      style="width: 80px; height: 80px"
+                    />
                   </div>
                   <div class="project-details">
                     <h3>Oracle JDK 17.0.12</h3>
@@ -296,7 +384,6 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue';
             </a>
           </div>
         </el-card>
-
       </div>
     </div>
   </div>

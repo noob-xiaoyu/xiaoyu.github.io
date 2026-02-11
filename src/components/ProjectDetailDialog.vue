@@ -14,7 +14,11 @@ defineProps({
   <div v-if="project" class="detail-content">
     <el-row :gutter="30">
       <el-col :xs="24" :md="14">
-        <el-carousel v-if="project.images && project.images.length > 0" height="250px" class="project-carousel" >
+        <el-carousel
+          v-if="project.images && project.images.length > 0"
+          height="250px"
+          class="project-carousel"
+        >
           <el-carousel-item v-for="img in project.images" :key="img">
             <img :src="img" style="width: 100%; height: 100%; object-fit: cover" />
           </el-carousel-item>
@@ -30,10 +34,27 @@ defineProps({
         </div>
         <h3 v-if="project.links">相关链接</h3>
         <div class="project-links">
-          <el-button v-if="project.links.github" tag="a" :href="project.links.github" target="_blank" class="action-btn" :icon="GithubIcon" style="text-decoration: none" >
+          <el-button
+            v-if="project.links.github"
+            tag="a"
+            :href="project.links.github"
+            target="_blank"
+            class="action-btn"
+            :icon="GithubIcon"
+            style="text-decoration: none"
+          >
             GitHub
           </el-button>
-          <el-button v-if="project.links.live" tag="a" :href="project.links.live" target="_blank" type="primary" class="action-btn" style="margin-left: 10px; text-decoration: none" plain >
+          <el-button
+            v-if="project.links.live"
+            tag="a"
+            :href="project.links.live"
+            target="_blank"
+            type="primary"
+            class="action-btn"
+            style="margin-left: 10px; text-decoration: none"
+            plain
+          >
             在线预览
           </el-button>
         </div>

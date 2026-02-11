@@ -21,7 +21,7 @@ defineProps({
     default: 'auto', // 'auto' | 'image' | 'component'
     validator: (value) => ['auto', 'image', 'component'].includes(value),
   },
-});
+})
 </script>
 
 <template>
@@ -32,15 +32,28 @@ defineProps({
           <slot name="icon">
             <!-- 自动检测模式 -->
             <template v-if="iconType === 'auto'">
-              <component v-if="icon && typeof icon !== 'string'" :is="icon" class="custom-svg-icon" />
+              <component
+                v-if="icon && typeof icon !== 'string'"
+                :is="icon"
+                class="custom-svg-icon"
+              />
               <el-avatar v-else-if="icon" :size="52" :src="icon" shape="square" />
             </template>
 
             <!-- 强制组件模式 -->
-            <component v-else-if="iconType === 'component' && icon" :is="icon" class="custom-svg-icon" />
+            <component
+              v-else-if="iconType === 'component' && icon"
+              :is="icon"
+              class="custom-svg-icon"
+            />
 
             <!-- 强制图片模式 -->
-            <el-avatar v-else-if="iconType === 'image' && icon" :size="52" :src="icon" shape="square" />
+            <el-avatar
+              v-else-if="iconType === 'image' && icon"
+              :size="52"
+              :src="icon"
+              shape="square"
+            />
           </slot>
         </div>
 

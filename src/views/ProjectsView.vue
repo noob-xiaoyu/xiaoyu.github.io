@@ -22,7 +22,8 @@ const projectList = ref([
     id: 'Imgui-menu',
     icon: imguiIcon,
     title: 'Imgui-menu',
-    shortDescription:'这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
+    shortDescription:
+      '这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
     to: 'projects/Imgui-menu',
   },
   {

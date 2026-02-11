@@ -4,19 +4,16 @@ on:
   push:
     branches: ["main"]
 
-# 权限设置
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 并发控制：新提交自动取消旧任务
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # 构建任务（只跑一次）
   build:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22" # 指定 Node 22
+          node-version: "22"
           cache: 'npm'
 
       - name: Install Dependencies
@@ -38,7 +35,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      # 这一步只应该出现一次
+      - name: Copy index.html to 404.html
+        run: cp dist/index.html dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
